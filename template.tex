@@ -1,0 +1,78 @@
+% ====================================================
+% 
+%
+%
+% ====================================================
+
+
+% 
+\documentclass[a4paper, cs4size]{ctexbook}
+
+\usepackage[top=30mm, bottom=24mm, left=25mm, right=25mm]{geometry}
+
+% set default font
+% confirm name of corresponding font in your system and replace them
+\setCJKmainfont[BoldFont={Heiti SC}, ItalicFont={Kaiti SC}]{Songti SC}
+\setmainfont[Mapping=tex-text]{Times New Roman}
+
+% to meet the requirement
+\CTEXsetup[name={,}]{chapter}
+\CTEXsetup[number={\arabic{chapter}}]{chapter}
+%\CTEXsetup[format={\raggedright}]{chapter}
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+
+\CTEXoptions[contentsname={目次}]
+\CTEXoptions[today=small]
+
+\begin{document}
+
+\frontmatter
+\CTEXsetup[format+={\centering}]{chapter}
+
+\tableofcontents
+% displaying table of contents within depth of 2
+\setcounter{tocdepth}{2}
+
+% uncomment to list figures in the thesis
+% \listoffigures
+
+% uncomment to list tables in the thesis
+% \listoftables
+
+
+
+
+
+
+\mainmatter % edit contents of your thesis below
+\CTEXsetup[format+={\raggedright}]{chapter}
+
+\include{introduction} %
+\chapter{sdkfjfl}
+这这样的论文应该还用不到chapter吧？
+
+不过好像不用又不行呢。。目录生成的有问题。。
+
+\section{测试一下}
+
+\songti 本来就是宋体啊
+\heiti 现在是黑体了。
+\fangsong 仿宋？有这个东西吗。
+\kaishu 居然还有楷书
+
+
+
+
+\backmatter 
+\CTEXsetup[format+={\centering}]{chapter}
+
+\include{conclusion}
+\include{thanks}
+% bibliography
+
+% uncomment if necessary
+% ...appendix
+
+
+\end{document}
